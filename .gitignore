@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # rcov generated
 coverage
 coverage.data
@@ -16,7 +15,7 @@ doc
 # jeweler generated
 pkg
 
-# Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore: 
+# Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore:
 #
 # * Create a file at ~/.gitignore
 # * Include files you want ignored
@@ -67,4 +66,3 @@ tmp
 .yardoc
 _yardoc
 doc/
->>>>>>> e889ce8ed003800ca1c4189c7518a0efc8fad7d0
