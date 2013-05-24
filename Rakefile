@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "musket"
   gem.homepage = "http://github.com/aniketpant/musket"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Ruby gem for generating front-end templates."
+  gem.description = "musket is a gem which can be used to generate front-end templates. It is capable for creating HTML, CSS and JS files with the basic requirements."
   gem.email = "me@aniketpant.com"
   gem.authors = ["Aniket Pant"]
   # dependencies defined in Gemfile
@@ -30,14 +30,6 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
 end
 
 task :default => :test
