@@ -1,6 +1,6 @@
 # Musket
 
-TODO: Write a gem description
+musket is a gem which can be used to generate front-end templates. It is capable for creating HTML, CSS and JS files with the basic requirements.
 
 ## Installation
 
