@@ -1,5 +1,4 @@
 require 'mote'
-require '../VERSION'
 
 module Musket
   def self.do

@@ -8,7 +8,8 @@ module Musket
 
     desc "generate [TEMPLATE] [FILENAME]", "generates a new file with the provided template and filename"
     def generate(template="", filename="")
-
+      puts "Template: #{template}"
+      puts "Filename: #{filename}"
     end
   end
 end
