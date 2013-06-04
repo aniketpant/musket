@@ -11,5 +11,10 @@ module Musket
       puts "Template: #{template}"
       puts "Filename: #{filename}"
     end
+
+    desc "setup", "creates configuration directory and default templates"
+    def setup
+      Musket.initialize
+    end
   end
 end
