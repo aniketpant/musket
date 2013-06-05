@@ -11,8 +11,6 @@ module Musket
   TEMPLATE_DIR = CONFIG_DIR + 'templates/'
 
   class << self
-    @config = []
-
     def load_config
       @config = Musket::Configuration.read if File.exists?CONFIG_FILE
     end
