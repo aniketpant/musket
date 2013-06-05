@@ -1,29 +1,39 @@
+require 'musket/configuration'
+require 'musket/version'
+
 require 'mote'
 require 'fileutils'
 require 'yaml'
 
 module Musket
-  def self.initialize
-    @config_dir = Dir.home + '/.musket/'
-    @config_file = @config_dir + 'config.yml'
+  @config_dir = Dir.home + '/.musket/'
+  @config_file = @config_dir + 'config.yml'
+  @template_dir = @config_dir + 'templates/'
 
-    Musket.create_config unless File.exists?@config_file
-    Musket.read_config if File.exists?@config_file
+  def init
+    @config = Musket::Configuration.read if File.exists?@config_file
   end
 
-  def self.read_config
-    config = File.open(@config_file, 'r')
-    @config = []
-    @config.push(YAML.load(config.read()))
-  end
+  class << self
+    def templates
+      d = Dir.new(@template_dir)
+      template_list = []
+      d.each {
+        |f|
+        template_name = File.basename(f, '.mote')
+        template_list.push(template_name) if template_name != '.' and template_name != '..'
+      }
+      puts "List of available templates:"
+      puts template_list.join('\n')
+    end
 
-  def self.create_config
-    puts "#{@config_file} does not exist. Creating file."
-    FileUtils.mkdir(@config_dir) unless File.exists?@config_dir
-    config = File.open(@config_file, 'w+')
-    output = []
-    output.push({'author' => 'TODO: Write Author Name'}.to_yaml)
-    config.puts(output.join('\n'))
-    config.close
+    def generate
+
+    end
+
+    def install
+      Musket::Configuration.create unless File.exists?@config_file
+      Musket::Configuration.copy_templates unless File.exists?@template_dir
+    end
   end
 end

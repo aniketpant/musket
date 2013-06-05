@@ -12,9 +12,14 @@ module Musket
       puts "Filename: #{filename}"
     end
 
+    desc "list", "lists available templates"
+    def list
+      Musket.templates
+    end
+
     desc "setup", "creates configuration directory and default templates"
     def setup
-      Musket.initialize
+      Musket.install
     end
   end
 end
