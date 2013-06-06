@@ -31,7 +31,7 @@ module Musket
       filename = "musket" if filename == ''
       template_file = TEMPLATE_DIR + "#{template}.mote"
       f = File.open(template_file)
-      output = Mote.parse(f.read, self, [:author]).call([author: @config["author"]])
+      output = Mote.parse(f.read, self, @config.keys).call(@config)
       current_dir = Dir.pwd
       new_file = File.open(current_dir + "/#{filename}.#{template}", 'w')
       new_file.puts(output)
