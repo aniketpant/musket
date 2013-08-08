@@ -1,4 +1,4 @@
-# Musket
+# Musket [![Gem Version](https://badge.fury.io/rb/musket.png)](http://badge.fury.io/rb/musket)
 
 musket is a gem which can be used to generate front-end templates. It is capable for creating HTML, CSS and JS files with the basic requirements.
 
