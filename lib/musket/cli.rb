@@ -24,6 +24,18 @@ module Musket
       puts templates.join('\n')
     end
 
+    desc "new [TEMPLATE]", "creates a new template"
+    def new(template="")
+      templates = Musket.templates
+      if templates.include? template
+        puts "Template already exists."
+      elsif template == ''
+        puts "Please enter a template name."
+      else
+        Musket.new(template) if template != ''
+      end
+    end
+
     desc "setup", "creates configuration directory and default templates"
     def setup
       Musket.install

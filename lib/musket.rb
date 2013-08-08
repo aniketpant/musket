@@ -38,6 +38,14 @@ module Musket
       new_file.close
     end
 
+    def new(template)
+      self.load_config
+      template_file = TEMPLATE_DIR + "#{template}.mote"
+      new_file = File.new(template_file, 'w')
+      new_file.close
+      puts "#{template_file} created."
+    end
+
     def install
       Musket::Configuration.create unless File.exists?CONFIG_FILE
       Musket::Configuration.copy_templates unless File.exists?TEMPLATE_DIR
