@@ -20,17 +20,19 @@ Or install it yourself as:
 
 ### Setup
 
-Run `musket setup`.
+    musket setup
 
 The `setup` command creates a `.musket` directory in your home folder. It contains a configuration file named `config.yml` which can be modified by you according to your need. It also creates a directory `templates` which houses all the templates which can be used by `musket`.
 
 ### List
 
-Use `musket list` to get a list of available templates.
+    musket list
+
+Use the `list` command to get a list of available templates.
 
 ### Generate
 
-`musket generate [TEMPLATE] [FILENAME]`
+    musket generate [TEMPLATE] [FILENAME]
 
 The TEMPLATE name provided should be a valid TEMPLATE name. The FILENAME is an optional field. If no FILENAME is supplied, it defaults to 'musket'.
 
@@ -42,9 +44,7 @@ If you wish to create a template of your own, you can created them under `.muske
 
 An easy way to create a template is to use the `new` command. The command will create a new file in the template directory which you can later edit according to your needs.
 
-```
-musket new [TEMPLATE]
-```
+    musket new [TEMPLATE]
 
 ## Contributing
 
