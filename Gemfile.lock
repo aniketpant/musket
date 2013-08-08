@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    musket (0.0.2)
+    musket (0.1.0)
       mote
       thor
 
