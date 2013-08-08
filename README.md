@@ -40,6 +40,12 @@ The generated file has the name `FILENAME.TEMPLATE`.
 
 If you wish to create a template of your own, you can created them under `.musket/templates/`. The templates should have a `.mote` extension. You should read up on how [mote](https://github.com/soveran/mote) parses the templates.
 
+An easy way to create a template is to use the `new` command. The command will create a new file in the template directory which you can later edit according to your needs.
+
+```
+musket new [TEMPLATE]
+```
+
 ## Contributing
 
 1. Fork it
